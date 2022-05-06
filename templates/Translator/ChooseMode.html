@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content= "user-scalable=no">
+    </head>
+    <body>
+        
+        <div id="main">
+            <div>
+                <button onclick="P2C()">Persian To Code</button>
+                <br><br><br><br><br><br><br>
+                <button onclick="C2P()">Code To Persian</button>
+            </div>
+        </div>
+    </body>
+
+    <style>
+        body{
+            background-color: rgb(219, 163, 8);
+        }
+        #main{
+            margin-top:40vh;
+            display: flex;
+            justify-content: center;
+        }
+        /* From uiverse.io */
+        .label {
+        position: relative;
+        top: -1px;
+        }
+
+        /* From uiverse.io by @xueyuantan */
+        button {
+        width: 9em;
+        height: 3em;
+        border-radius: 30em;
+        font-size: 50px;
+        font-family: inherit;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        box-shadow: 6px 6px 12px #c5c5c5,
+                    -6px -6px 12px #ffffff;
+        }
+
+        button::before {
+        content: '';
+        width: 0;
+        height: 3em;
+        border-radius: 30em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+        transition: .1s ease;
+        display: block;
+        z-index: -1;
+        }
+
+        button:hover::before {
+        width: 9em;
+        }
+
+    </style>
+    <script>
+        function C2P(){
+
+            window.location.assign("/Translator/C2P/{{Name}}")
+        }
+        function P2C(){
+            window.location.assign("/Translator/P2C/{{Name}}")
+        }
+    </script>
+</html>

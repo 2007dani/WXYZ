@@ -1,0 +1,46 @@
+from django.db import models
+
+# Create your models here.
+class LANGUAGE_CODE(models.Model):
+    id = models.AutoField(primary_key=True)
+    Letters_Alef = models.CharField(max_length=2,null=1)
+    Letters_Be = models.CharField(max_length=2,null=1)
+    Letters_Pe = models.CharField(max_length=2,null=1)
+    Letters_Te = models.CharField(max_length=2,null=1)
+    Letters_Se = models.CharField(max_length=2,null=1)
+    Letters_Jim = models.CharField(max_length=2,null=1)
+    Letters_Che = models.CharField(max_length=2,null=1)
+    Letters_HeJimi = models.CharField(max_length=2,null=1)
+    Letters_Khe = models.CharField(max_length=2,null=1)
+    Letters_Dal = models.CharField(max_length=2,null=1)
+    Letters_Zal = models.CharField(max_length=2,null=1)
+    Letters_Re = models.CharField(max_length=2,null=1)
+    Letters_Ze = models.CharField(max_length=2,null=1)
+    Letters_Zhe = models.CharField(max_length=2,null=1)
+    Letters_Sin = models.CharField(max_length=2,null=1)
+    Letters_Shin = models.CharField(max_length=2,null=1)
+    Letters_Sad = models.CharField(max_length=2,null=1)
+    Letters_Zad = models.CharField(max_length=2,null=1)
+    Letters_Ta = models.CharField(max_length=2,null=1)
+    Letters_Za = models.CharField(max_length=2,null=1)
+    Letters_Ain = models.CharField(max_length=2,null=1)
+    Letters_Ghain = models.CharField(max_length=2,null=1)
+    Letters_Fe = models.CharField(max_length=2,null=1)
+    Letters_Qaf = models.CharField(max_length=2,null=1)
+    Letters_Kaf = models.CharField(max_length=2,null=1)
+    Letters_Ghaf = models.CharField(max_length=2,null=1)
+    Letters_Lam = models.CharField(max_length=2,null=1)
+    Letters_MiM = models.CharField(max_length=2,null=1)
+    Letters_Noon = models.CharField(max_length=2,null=1)
+    Letters_Vav = models.CharField(max_length=2,null=1)
+    Letters_He = models.CharField(max_length=2,null=1)
+    Letters_Ye = models.CharField(max_length=2,null=1)
+    Letters_Hyphen = models.CharField(max_length=2,null=1)
+
+class Users(models.Model):
+    Name = models.CharField(max_length=200,null=1)
+    Password = models.CharField(max_length=200,null=1)
+class Notes(models.Model):
+    Text = models.CharField(max_length=10000,null=1)
+    User = models.ForeignKey(Users, models.CASCADE)
+
